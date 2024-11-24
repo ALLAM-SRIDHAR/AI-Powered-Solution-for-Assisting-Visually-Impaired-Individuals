@@ -150,7 +150,6 @@ def main():
         }
         </style>
         """, unsafe_allow_html=True)
-    pass
 
     st.markdown('<p class="big-font">AI Vision Assistant</p>', unsafe_allow_html=True)
     
