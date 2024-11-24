@@ -1,0 +1,6 @@
+streamlit==1.24.0
+pillow
+google-generativeai
+pytesseract
+gtts
+langchain
