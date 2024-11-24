@@ -10,11 +10,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
 import shutil
-tesseract_path = shutil.which("tesseract")
-if not tesseract_path:
-    st.error("Tesseract OCR is not installed or not found in PATH.")
-else:
-    st.write(f"Tesseract found at: {tesseract_path}")
+
 
 
 # Configure Google API
@@ -25,7 +21,16 @@ GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Configure Tesseract path - Replace this with your actual Tesseract installation path
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = tesseract_path
+
+tesseract_path = shutil.which("tesseract")
+if not tesseract_path:
+    st.error("Tesseract OCR is not installed or not found in PATH.")
+else:
+    st.write(f"Tesseract found at: {tesseract_path}")
+
+
 
 def init_gemini_vision():
     """Initialize the Gemini Vision model"""
