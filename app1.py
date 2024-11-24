@@ -11,8 +11,6 @@ from langchain.chains import LLMChain
 
 import shutil
 
-
-
 # Configure Google API
 #f = open('api key.txt')
 #GOOGLE_API_KEY = f.read()
@@ -24,12 +22,12 @@ genai.configure(api_key=GOOGLE_API_KEY)
 #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
+# Check if Tesseract OCR is installed and available in PATH
 tesseract_path = shutil.which("tesseract")
 if not tesseract_path:
     st.error("Tesseract OCR is not installed or not found in PATH.")
 else:
     st.write(f"Tesseract found at: {tesseract_path}")
-
 
 
 def init_gemini_vision():
@@ -152,6 +150,7 @@ def main():
         }
         </style>
         """, unsafe_allow_html=True)
+    pass
 
     st.markdown('<p class="big-font">AI Vision Assistant</p>', unsafe_allow_html=True)
     
