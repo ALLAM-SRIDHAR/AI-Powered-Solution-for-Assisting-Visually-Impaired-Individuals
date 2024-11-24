@@ -20,14 +20,18 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 # Configure Tesseract path - Replace this with your actual Tesseract installation path
 #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-pytesseract.pytesseract.tesseract_cmd = tesseract_path
+#pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
-# Check if Tesseract OCR is installed and available in PATH
+# Try to get the path of the Tesseract OCR binary
 tesseract_path = shutil.which("tesseract")
-if not tesseract_path:
-    st.error("Tesseract OCR is not installed or not found in PATH.")
+
+# If Tesseract is found, set the path
+if tesseract_path:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_path
+    print(f"Tesseract found at: {tesseract_path}")
 else:
-    st.write(f"Tesseract found at: {tesseract_path}")
+    raise RuntimeError("Tesseract OCR is not installed or not found in the PATH.")
+
 
 
 def init_gemini_vision():
