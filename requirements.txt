@@ -5,3 +5,6 @@ pytesseract>=0.3.10
 gtts>=2.2.3
 langchain>=0.0.244
 langchain-google-genai>=0.0.2
+
+sudo apt-get install tesseract-ocr
+
