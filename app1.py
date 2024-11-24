@@ -9,6 +9,16 @@ from langchain_google_genai import GoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
+import shutil
+import streamlit as st
+
+tesseract_path = shutil.which("tesseract")
+if not tesseract_path:
+    st.error("Tesseract OCR is not installed or not found in PATH.")
+else:
+    st.write(f"Tesseract found at: {tesseract_path}")
+
+
 # Configure Google API
 #f = open('api key.txt')
 #GOOGLE_API_KEY = f.read()
