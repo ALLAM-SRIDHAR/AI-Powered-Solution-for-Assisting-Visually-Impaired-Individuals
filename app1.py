@@ -10,8 +10,10 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
 # Configure Google API
-f = open('api key.txt')
-GOOGLE_API_KEY = f.read()
+#f = open('api key.txt')
+#GOOGLE_API_KEY = f.read()
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Configure Tesseract path - Replace this with your actual Tesseract installation path
