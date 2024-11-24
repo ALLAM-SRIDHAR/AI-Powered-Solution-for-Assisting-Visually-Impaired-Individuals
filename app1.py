@@ -10,8 +10,6 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
 import shutil
-import streamlit as st
-
 tesseract_path = shutil.which("tesseract")
 if not tesseract_path:
     st.error("Tesseract OCR is not installed or not found in PATH.")
