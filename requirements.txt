@@ -1,6 +1,7 @@
-streamlit==1.24.0
-pillow
-google-generativeai
-pytesseract
-gtts
-langchain
+streamlit>=1.24.0
+Pillow>=8.0.0
+google-generativeai>=0.2.0
+pytesseract>=0.3.10
+gtts>=2.2.3
+langchain>=0.0.244
+langchain-google-genai>=0.0.2
