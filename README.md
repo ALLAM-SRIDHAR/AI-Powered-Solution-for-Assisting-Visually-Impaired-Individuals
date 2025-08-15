@@ -1,9 +1,10 @@
 # 🧠 AI-Powered Solution for Assisting Visually Impaired Individuals
 
-This project leverages **Generative AI**, **OCR**, and **Text-to-Speech** technologies to create an intelligent assistant that helps **visually impaired users** perceive and interact with their surroundings more effectively.
-
+This project leverages **Generative AI**, **OCR**, and **Text-to-Speech** technologies to create an intelligent assistant that helps **visually impaired users** perceive and interact with their surroundings more effectively. 
 
 **This project aims to leverage Generative AI to assist visually impaired individuals in perceiving and interacting with their surroundings. Visually impaired individuals often face challenges in understanding their environment, reading visual content, and performing tasks that rely on sight.**
+
+
 ---
 
 ## 🎯 Objective
